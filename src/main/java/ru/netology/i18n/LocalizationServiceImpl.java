@@ -5,6 +5,8 @@ import ru.netology.entity.Country;
 public class LocalizationServiceImpl implements LocalizationService {
 
     public String locale(Country country) {
+        if (country == null)
+            return "Welcome";
         switch (country) {
             case RUSSIA:
                 return "Добро пожаловать";
